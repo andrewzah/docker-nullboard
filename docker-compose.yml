@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  nullboard:
+    build: .
+    restart: always
+    volumes:
+      - type: bind
+        source: ./nullboard.html
+        target: /www/public/index.html
+    ports:
+      - "3564:3564"
